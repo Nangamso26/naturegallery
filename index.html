@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monochrome Nature Gallery</title>
+    <style>
+        /* Base Styles - Pure Black, White, and Grays */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* Header / Banner */
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 1px solid #333333;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #aaaaaa;
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* Card Item */
+        .gallery-card {
+            background-color: #1e1e1e;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            border-color: #ffffff;
+        }
+
+        /* Card Image Container */
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Removes all color from the images */
+            filter: grayscale(100%);
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .gallery-card:hover .image-wrapper img {
+            transform: scale(1.08);
+            /* Optional: Keeps image grayscale on hover */
+            filter: grayscale(100%) contrast(110%);
+        }
+
+        /* Card Content */
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: #999999;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #000000;
+            color: #888888;
+            border-top: 1px solid #333333;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Monochrome Nature</h1>
+        <p>A black & white photography study of natural forms and landscapes</p>
+    </header>
+
+    <main>
+        <section class="gallery-grid">
+
+            <!-- Card 1 -->
+            <article class="gallery-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Mountain Lake Reflection">
+                </div>
+                <div class="card-content">
+                    <h3>Alpine Reflection</h3>
+                    <p>Crystal-clear mountain waters echoing the majesty of surrounding peaks.</p>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="gallery-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Sunlight in Forest">
+                </div>
+                <div class="card-content">
+                    <h3>Woodland Light</h3>
+                    <p>High-contrast morning light filtering through a dense forest canopy.</p>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="gallery-card">
+                <div class="image-wrapper">
+                    <img src=https://tse1.mm.bing.net/th/id/OIP.SMasZlSJ6sWgGt31YW-V6wHaG_?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Mountain stream flowing through rocks">
+                </div>
+                <div class="card-content">
+                    <h3>Coastline Shadows</h3>
+                    <p>Soft beach sands meeting the rhythmic swell of dark ocean waves.</p>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="gallery-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80" alt="Sunlight beaming through forest trees">"https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80" alt="Desert Road and Mountains">
+                </div>
+                <div class="card-content">
+                    <h3>Desert Horizon</h3>
+                    <p>Expansive valley roads framed by stark, dramatic rock formations.</p>
+                </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="gallery-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=800&q=80" alt="Waterfall with Bridge">
+                </div>
+                <div class="card-content">
+                    <h3>Cascading Falls</h3>
+                    <p>A powerful rush of water moving through dark, textured stone.</p>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="gallery-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80" alt="Sunset over Ocean Waves">
+                </div>
+                <div class="card-content">
+                    <h3>Ocean Twilight</h3>
+                    <p>Tonal gradients of light reflecting across ocean surface waters at dusk.</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Nature Gallery. Photos provided by <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.</p>
+    </footer>
+
+</body>
+</html>
